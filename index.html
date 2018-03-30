@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href='bootstrap.css'>
+  </head>
+  <body>
+
+      <div class="center container" id='app'>
+
+        <div style="margin-top: 75px" id='headers'>
+          <h1 style="font-size: 94px" class="glowFont">Play the Guessing Game</h1>
+          <h2 style="font-size: 54px" class="glowFont">Guess a number between 1-100!</h2>
+        </div>
+
+        <div align="center" id='main'>
+          <div id='inputParent'>
+           <input id="playerInput" class="center" placeholder="#" maxlength='3' autofocus=autofocus></input>
+           <button style="text-align: center;" id="submit" class="buttonElectroStyle">Go!</button>
+          </div>
+          <br>
+          <div id='guesses'>
+            <ul>
+              <li class="guess">-</li>
+              <li class="guess">-</li>
+              <li class="guess">-</li>
+              <li class="guess">-</li>
+              <li class="guess">-</li>
+            </ul>
+          </div>
+
+          <div style="padding: 2%" id="menu-btns" align="center">
+            <button id="reset" class="buttonElectroStyle">Reset</button>
+            <button id="hint" class="buttonElectroStyle">Hint</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div class="center" id="footer">
+        <div class="row"> 
+          <div class="col-sm-4">
+            <img src='Images\fa-logo@2x.png'></img>
+          </div>
+
+          <div class="col-sm-4">
+            <h4 style="font-size: 45px" class="glowFont">Project by Augusto Proano</h4>
+          </div>
+
+          <div class="col-sm-4">
+            <img src='Images\grace_hopper_academy.png'></img>
+          </div>
+
+
+        </div>
+    </div>
+
+  </body>
+</html>
