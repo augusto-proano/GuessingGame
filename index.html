@@ -10,8 +10,8 @@
       <div class="center container" id='app'>
 
         <div style="margin-top: 75px" id='headers'>
-          <h1 style="font-size: 94px" class="glowFont">Play the Guessing Game</h1>
-          <h2 style="font-size: 54px" class="glowFont">Guess a number between 1-100!</h2>
+          <h1 id="title" style="font-size: 94px" class="glowFont">Play the Guessing Game</h1>
+          <h2 id="subtitle" style="font-size: 54px" class="glowFont">Guess a number between 1-100!</h2>
         </div>
 
         <div align="center" id='main'>
@@ -21,7 +21,7 @@
           </div>
           <br>
           <div id='guesses'>
-            <ul>
+            <ul id="guess-list">
               <li class="guess">-</li>
               <li class="guess">-</li>
               <li class="guess">-</li>
@@ -58,4 +58,7 @@
     </div>
 
   </body>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="GuessingGame.js"></script>
 </html>
