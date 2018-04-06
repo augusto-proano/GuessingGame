@@ -49,7 +49,7 @@ Game.prototype.checkGuess = function(){
     console.log(this.playersGuess)  
     if(this.playersGuess === this.winningNumber){
         $("#submit, #hint, #playerInput").prop("disabled", true);
-        $("subtitlte").text("Press the Reset button to play again!");
+        $("#subtitle").text("Press the Reset button to play again!");
         return "You Win!";
     } else if (this.pastGuesses.indexOf(this.playersGuess) >= 0){
         return "You have already guessed that number.";
@@ -60,7 +60,7 @@ Game.prototype.checkGuess = function(){
 
     if(this.pastGuesses.length === 5){
         $("#submit, #hint, #playerInput").prop("disabled", true);
-        $("subtitlte").text("Press the Reset button to play again!");
+        $("#subtitle").text("Press the Reset button to play again!");
         return "You Lose :(";
     }
 
@@ -86,7 +86,7 @@ function newGame(){
 }
 
 Game.prototype.provideHint = function(){
-    newArr = [this.winningNumber, generateWinningNumber(), generateWinningNumber()];
+    newArr = [this.winningNumber, generateWinningNumber(), generateWinningNumber(), generateWinningNumber()];
 
     return shuffle(newArr);
 }
@@ -100,9 +100,10 @@ function makeGuess(game){
 }
 
 
-$(document).ready(() => {
-    var game = newGame();
 
+$(document).ready(() => {
+    let game = newGame();
+    
     $("#submit").on("click", () => {
         makeGuess(game);
     })
@@ -122,7 +123,8 @@ $(document).ready(() => {
     })
 
     $("#hint").on("click", () => {
-        $("#subtitle").text("The Winner Number is: " + game.provideHint().join(" or "));
+        let hintArr  = game.provideHint();
+        $("#subtitle").text("The Winner Number is: " + hintArr.slice(0, -1).join(", ") + " or " + hintArr[hintArr.length - 1]);
         $("#hint").prop("disabled", true);
     })
 })
